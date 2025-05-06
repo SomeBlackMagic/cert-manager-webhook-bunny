@@ -26,7 +26,7 @@ Chart is based on: https://github.com/vadimkim/cert-manager-webhook-hetzner/
 
 ### Using public helm chart
 ```bash
-helm repo add cert-manager-webhook-bunny  https://schmitzis.github.io/cert-manager-webhook-bunny /
+helm repo add cert-manager-webhook-bunny https://someblackmagic.github.io/cert-manager-webhook-bunny/
 # Replace the groupName value with your desired domain
 helm install --namespace cert-manager cert-manager-webhook-bunny cert-manager-webhook-bunny/cert-manager-webhook-bunny --set groupName=acme.bunny.net
 ```
@@ -69,8 +69,8 @@ spec:
             solverName: bunny
             config:
               apiSecretRef:
-                Key: accessKey
-                Name: bunny-credentials
+                key: accessKey
+                name: bunny-credentials
 ```
 
 ### Credentials
